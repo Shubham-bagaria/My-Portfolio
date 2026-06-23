@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subham Bagaria — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ====== NAVIGATION ====== -->
+  <nav id="mainNav">
+    <a href="#hero" class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">SB.</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ====== HERO ====== -->
+  <section id="hero">
+    <div class="hero-blob blob1"></div>
+    <div class="hero-blob blob2"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">
+          <span class="grad">Subham</span><br>Bagaria
+        </h1>
+        <p class="hero-title">
+          <span>Full-Stack Developer</span> · <span>NLP Engineer</span> · <span>Teaching Assistant</span>
+        </p>
+        <p class="hero-desc">
+          A full-stack developer stepping into AI & NLP — building voice-driven platforms, accessible web experiences,
+          and LLM-powered products. GATE CSE 2025 qualified. Currently TA at NSUT and actively seeking roles in
+          Full-Stack, AI/NLP, or Research.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Projects ↓</a>
+          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="photo-ring">
+          <div class="photo-inner" id="photoInner">
+            <img id="photoImg" src="Shubham-Circle.jpg" alt="Subham Bagaria" />
+          </div>
+        </div>
+        <div class="hero-socials">
+          <a href="https://linkedin.com/in/subham-bagaria" target="_blank" class="social-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/shubham-bagaria" target="_blank" class="social-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== STATS ====== -->
+  <div class="stats-strip">
+    <div class="stats-grid">
+      <div class="stat reveal d1">
+        <div class="stat-n">8.3</div>
+        <div class="stat-l">B.Tech CGPA</div>
+      </div>
+      <div class="stat reveal d2">
+        <div class="stat-n">91.4%</div>
+        <div class="stat-l">NLP Accuracy</div>
+      </div>
+      <div class="stat reveal d3">
+        <div class="stat-n">3</div>
+        <div class="stat-l">Roles / Internships</div>
+      </div>
+      <div class="stat reveal d4">
+        <div class="stat-n">10K+</div>
+        <div class="stat-l">Records Processed</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== ABOUT ====== -->
+  <section class="section" id="about">
+    <div class="sec-inner">
+      <div class="sec-pre">Who I Am</div>
+      <h2 class="sec-title">About <span class="accent">Me</span></h2>
+      <div class="about-grid">
+        <div class="about-text reveal left">
+          <p>I'm <strong>Subham Bagaria</strong>, an M.Tech IT student at <strong>Netaji Subhash University of
+              Technology, Delhi</strong> and a <strong>Teaching Assistant</strong> for B.Tech students in Design and
+            Analysis of Algorithms.</p>
+          <p>My work sits at the intersection of <strong>full-stack development</strong> and <strong>AI/NLP</strong> —
+            most recently building VoiceShop, a fully voice-controlled e-commerce platform designed for <strong>visually
+              impaired and specially-abled users</strong>, achieving 91.4% intent recognition accuracy.</p>
+          <p>I've interned at <strong>Celebal Technologies</strong> (Power BI) and <strong>Kistechno Software</strong>
+            (Full Stack), and I'm actively pursuing research on voice-driven accessible interfaces for online retail.
+          </p>
+          <p>From <strong>Sikar, Rajasthan</strong> — GATE CSE 2025 qualified, Azure DP-900 certified, and NVIDIA Deep
+            Learning certified.</p>
+        </div>
+        <div class="about-cards reveal right">
+          <div class="about-card">
+            <div class="about-card-icon">🎓</div>
+            <div class="about-card-body">
+              <div class="about-card-title">M.Tech — Information Technology</div>
+              <div class="about-card-sub">NSUT Delhi · 2025–Present · CGPA 7.0</div>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🏫</div>
+            <div class="about-card-body">
+              <div class="about-card-title">Teaching Assistant</div>
+              <div class="about-card-sub">Design & Analysis of Algorithms · NSUT</div>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">♿</div>
+            <div class="about-card-body">
+              <div class="about-card-title">Research — VoiceShop Accessibility</div>
+              <div class="about-card-sub">Voice e-commerce for visually impaired users · 91.4% accuracy</div>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">📍</div>
+            <div class="about-card-body">
+              <div class="about-card-title">Based in New Delhi</div>
+              <div class="about-card-sub">From Sikar, Rajasthan · Open to remote/hybrid roles</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== EXPERIENCE ====== -->
+  <section class="section" id="experience">
+    <div class="sec-inner">
+      <div class="sec-pre">Where I've Worked</div>
+      <h2 class="sec-title">Work <span class="accent">Experience</span></h2>
+      <div class="timeline">
+
+        <div class="t-item reveal">
+          <div class="t-dot"></div>
+          <div class="t-header">
+            <span class="t-company">NSUT, Delhi</span>
+            <span class="t-role ta">Teaching Assistant</span>
+            <span class="t-date">Jul 2025 – Present</span>
+          </div>
+          <ul class="t-points">
+            <li>Conducted laboratory sessions for B.Tech students in <strong>Design and Analysis of Algorithms</strong>.
+            </li>
+            <li>Assisted students in understanding lab concepts, programming assignments, and practical exercises.</li>
+            <li>Resolved student queries related to algorithms, data analysis, programming, and cybersecurity concepts.
+            </li>
+          </ul>
+        </div>
+
+        <div class="t-item reveal d1">
+          <div class="t-dot"></div>
+          <div class="t-header">
+            <span class="t-company">Celebal Technologies</span>
+            <span class="t-role">Power BI Intern</span>
+            <span class="t-date">May – Jul 2023</span>
+          </div>
+          <ul class="t-points">
+            <li>Designed and developed <strong>5+ interactive Power BI dashboards</strong> to visualize complex business
+              data, aiding management decision-making.</li>
+            <li>Utilized <strong>DAX</strong> to create calculated measures and columns for in-depth data analysis.</li>
+            <li>Processed and cleaned <strong>10K+ records</strong> using Power Query for data consistency and
+              reliability.</li>
+          </ul>
+        </div>
+
+        <div class="t-item reveal d2">
+          <div class="t-dot"></div>
+          <div class="t-header">
+            <span class="t-company">Kistechno Software Ltd.</span>
+            <span class="t-role">Full Stack Intern</span>
+            <span class="t-date">Jun – Aug 2022</span>
+          </div>
+          <ul class="t-points">
+            <li>Created responsive, user-centric web interfaces using <strong>HTML, CSS, and JavaScript</strong>.</li>
+            <li>Integrated server-side logic using <strong>PHP</strong> and managed relational databases with
+              <strong>MySQL</strong>.
+            </li>
+            <li>Optimized API workflows to enable seamless data exchange between frontend and backend modules.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SKILLS ====== -->
+  <section class="section" id="skills">
+    <div class="sec-inner">
+      <div class="sec-pre">Tech Stack</div>
+      <h2 class="sec-title">Skills &amp; <span class="accent">Tools</span></h2>
+      <div class="skills-grid">
+        <div class="skill-card reveal d1">
+          <div class="skill-cat">Frontend</div>
+          <div class="skill-tags">
+            <span class="tag">HTML5</span><span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span><span class="tag">React.js</span>
+          </div>
+        </div>
+        <div class="skill-card reveal d2">
+          <div class="skill-cat">Backend</div>
+          <div class="skill-tags">
+            <span class="tag">Node.js</span><span class="tag">Express.js</span>
+            <span class="tag">PHP</span><span class="tag">REST APIs</span>
+          </div>
+        </div>
+        <div class="skill-card reveal d3">
+          <div class="skill-cat">Databases</div>
+          <div class="skill-tags">
+            <span class="tag">MongoDB</span><span class="tag">MySQL</span>
+          </div>
+        </div>
+        <div class="skill-card reveal d4">
+          <div class="skill-cat">Programming</div>
+          <div class="skill-tags">
+            <span class="tag">Python</span><span class="tag">C++</span>
+            <span class="tag">C</span><span class="tag">JavaScript</span>
+          </div>
+        </div>
+        <div class="skill-card reveal d5">
+          <div class="skill-cat">Core CS</div>
+          <div class="skill-tags">
+            <span class="tag">DSA</span><span class="tag">OOPs</span>
+            <span class="tag">DBMS</span><span class="tag">Computer Networks</span>
+            <span class="tag">Memory Mgmt</span>
+          </div>
+        </div>
+        <div class="skill-card reveal d6">
+          <div class="skill-cat">Tools &amp; Platforms</div>
+          <div class="skill-tags">
+            <span class="tag">Git / GitHub</span><span class="tag">Linux</span>
+            <span class="tag">Power BI</span><span class="tag">VS Code</span>
+            <span class="tag">Azure</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PROJECTS ====== -->
+  <section class="section" id="projects">
+    <div class="sec-inner">
+      <div class="sec-pre">What I've Built</div>
+      <h2 class="sec-title">Featured <span class="accent">Projects</span></h2>
+      <div class="projects-grid">
+
+        <div class="proj-card reveal d1">
+          <div class="proj-top">
+            <div class="proj-icon">🎙️</div>
+            <span class="proj-badge badge-live">✓ Completed</span>
+          </div>
+          <div class="proj-name">VoiceShop — Voice-Controlled E-Commerce</div>
+          <p class="proj-desc">
+            Fully hands-free e-commerce platform using the <strong>Web Speech API</strong> for real-time speech
+            recognition and synthesis. Hybrid NLP engine combining rule-based pattern matching with LLM inference
+            (Claude Sonnet API) for intent detection and entity extraction. Knowledge-based recommendation system with
+            real-time attribute-similarity scoring.
+          </p>
+          <div class="proj-tech">
+            <span class="tag">Web Speech API</span><span class="tag">Claude API</span>
+            <span class="tag">NLP</span><span class="tag">React</span><span class="tag">Node.js</span>
+          </div>
+          <span class="proj-stat">91.4% intent accuracy · 87.6% task completion</span>
+        </div>
+
+        <div class="proj-card reveal d2">
+          <div class="proj-top">
+            <div class="proj-icon">☕</div>
+            <span class="proj-badge badge-mern">MERN Stack</span>
+          </div>
+          <div class="proj-name">The Moonlight Cafe</div>
+          <p class="proj-desc">
+            Full-stack food ordering application on the MERN stack. JWT-secured authentication across 100+ test sessions
+            with zero data leaks. Real-time menu browsing, order placement, table reservations, and an automated admin
+            dashboard managing 20+ menu items and incoming orders.
+          </p>
+          <div class="proj-tech">
+            <span class="tag">MongoDB</span><span class="tag">Express</span>
+            <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">JWT</span>
+          </div>
+        </div>
+
+        <div class="proj-card reveal d3">
+          <div class="proj-top">
+            <div class="proj-icon">🏨</div>
+            <span class="proj-badge badge-php">PHP / MySQL</span>
+          </div>
+          <div class="proj-name">Hotel Management System</div>
+          <p class="proj-desc">
+            Hotel management portal built with PHP, MySQL, JavaScript, and CSS. Streamlined database queries reducing
+            data retrieval time by ~15%. Structured MySQL records support complete daily operational workflows including
+            room management and guest tracking.
+          </p>
+          <div class="proj-tech">
+            <span class="tag">PHP</span><span class="tag">MySQL</span>
+            <span class="tag">JavaScript</span><span class="tag">CSS</span>
+          </div>
+          <span class="proj-stat">~15% faster data retrieval</span>
+        </div>
+
+        <div class="proj-card reveal d4">
+          <div class="proj-top">
+            <div class="proj-icon">♿</div>
+            <span class="proj-badge badge-research">Research Paper</span>
+          </div>
+          <div class="proj-name">VoiceShop — Research Paper</div>
+          <p class="proj-desc">
+            "VoiceShop: A Voice-Controlled Interface for Accessible Online Retail with NLP-Enhanced Interaction" — under
+            preparation for submission. This research focuses on building a fully voice-driven e-commerce platform
+            designed specifically for <strong>visually impaired and specially-abled users</strong> who cannot interact
+            with traditional touch/click-based interfaces. Enables blind users to browse products, place orders, and
+            track deliveries entirely through natural voice commands — bridging the accessibility gap in online retail.
+          </p>
+          <div class="proj-tech">
+            <span class="tag">NLP</span><span class="tag">Accessibility</span>
+            <span class="tag">HCI</span><span class="tag">LLM</span><span class="tag">Web Speech</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== EDUCATION ====== -->
+  <section class="section" id="education">
+    <div class="sec-inner">
+      <div class="sec-pre">Academic Journey</div>
+      <h2 class="sec-title">Education &amp; <span class="accent">Certifications</span></h2>
+      <div class="edu-grid" style="margin-bottom: 3rem;">
+        <div class="edu-card reveal d1">
+          <div class="edu-deg">M.Tech · Information Technology</div>
+          <div class="edu-school">Netaji Subhash University of Technology, Delhi</div>
+          <div class="edu-yr">2025 – Present</div>
+          <div class="edu-score">7.0 CGPA</div>
+        </div>
+        <div class="edu-card reveal d2">
+          <div class="edu-deg">B.Tech · Computer Science</div>
+          <div class="edu-school">Poornima Institute of Engineering &amp; Technology, Jaipur</div>
+          <div class="edu-yr">2020 – 2024</div>
+          <div class="edu-score">8.3 CGPA</div>
+        </div>
+        <div class="edu-card reveal d3">
+          <div class="edu-deg">Senior Secondary · RBSE</div>
+          <div class="edu-school">Shastri B.N. Sr. Sec. School, Sikar</div>
+          <div class="edu-yr">2018 – 2019</div>
+          <div class="edu-score">81.8%</div>
+        </div>
+        <div class="edu-card reveal d4">
+          <div class="edu-deg">Secondary · RBSE</div>
+          <div class="edu-school">Prince Sr. Sc. School, Sikar</div>
+          <div class="edu-yr">2015 – 2016</div>
+          <div class="edu-score">75%</div>
+        </div>
+      </div>
+
+      <div class="sec-pre">Credentials</div>
+      <h3 style="font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 800; margin-bottom: 1.5rem;">
+        Certificates &amp; Achievements</h3>
+      <div class="cert-grid">
+        <div class="cert-item reveal d1">
+          <div class="cert-dot"></div>
+          <div class="cert-name">Power BI Data Analyst — Celebal Technologies</div>
+        </div>
+        <div class="cert-item reveal d2">
+          <div class="cert-dot"></div>
+          <div class="cert-name">Full Stack Web Development — Kistechno Software</div>
+        </div>
+        <div class="cert-item reveal d3">
+          <div class="cert-dot"></div>
+          <div class="cert-name">Microsoft Azure Data Fundamentals (DP-900)</div>
+        </div>
+        <div class="cert-item reveal d4">
+          <div class="cert-dot"></div>
+          <div class="cert-name">Fundamentals of Deep Learning — NVIDIA</div>
+        </div>
+        <div class="cert-item reveal d5">
+          <div class="cert-dot gold"></div>
+          <div class="cert-name">GATE CSE 2025 Qualified ✦</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT ====== -->
+  <section class="section" id="contact">
+    <div class="sec-inner">
+      <div class="sec-pre">Get In Touch</div>
+      <h2 class="sec-title">Contact <span class="accent">Me</span></h2>
+      <div class="contact-box reveal">
+        <a href="mailto:Shubhambagaria01@gmail.com" class="c-pill">
+          <div class="c-pill-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </div>
+          <span>Shubhambagaria01@gmail.com</span>
+        </a>
+        <a href="https://linkedin.com/in/subham-bagaria" target="_blank" class="c-pill">
+          <div class="c-pill-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </div>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/shubham-bagaria" target="_blank" class="c-pill">
+          <div class="c-pill-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+          </div>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <span class="f-logo">Subham Bagaria</span>
+    <p>© 2025 · Made with ♥ in New Delhi, India</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
