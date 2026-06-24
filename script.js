@@ -1,5 +1,5 @@
 /* ==============================
-   CURSOR GLOW
+   CURSOR GLOW (desktop only)
 ============================== */
 const glow = document.getElementById('cursorGlow');
 if (glow) {
@@ -10,24 +10,50 @@ if (glow) {
 }
 
 /* ==============================
+   SMOOTH SCROLL — offset fix for fixed nav
+============================== */
+const NAV_HEIGHT = 68;
+
+// All anchor links (#xxx) — smooth scroll with nav offset
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (!href || href === '#') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    const target = document.querySelector(href);
+    if (!target) return;
+    e.preventDefault();
+    const top = target.getBoundingClientRect().top + window.scrollY - NAV_HEIGHT;
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
+});
+
+/* ==============================
    NAV — SCROLL SHADOW & ACTIVE LINK
 ============================== */
-const nav     = document.getElementById('mainNav');
+const nav      = document.getElementById('mainNav');
 const sections = document.querySelectorAll('section[id]');
-const navAs   = document.querySelectorAll('.nav-links a');
+const navAs    = document.querySelectorAll('.nav-links a');
 
-window.addEventListener('scroll', () => {
-  /* Add shadow when scrolled */
-  nav.classList.toggle('scrolled', window.scrollY > 40);
-
-  /* Highlight active section in desktop nav */
+function updateActiveNav() {
   let cur = '';
   sections.forEach(sec => {
-    if (window.scrollY >= sec.offsetTop - 120) cur = sec.id;
+    if (window.scrollY >= sec.offsetTop - NAV_HEIGHT - 10) cur = sec.id;
   });
   navAs.forEach(a => {
     a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
   });
+  mobileLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
+  });
+}
+
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+  updateActiveNav();
 });
 
 /* ==============================
@@ -39,23 +65,12 @@ const revObs = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.classList.add('in');
     } else {
-      // Remove class when element leaves viewport so it animates again on re-entry
       entry.target.classList.remove('in');
     }
   });
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
 revealEls.forEach(el => revObs.observe(el));
-
-/* ==============================
-   DESKTOP NAV — ACTIVE ON CLICK
-============================== */
-navAs.forEach(a => {
-  a.addEventListener('click', () => {
-    navAs.forEach(x => x.classList.remove('active'));
-    a.classList.add('active');
-  });
-});
 
 /* ==============================
    HAMBURGER MENU (MOBILE)
@@ -67,25 +82,28 @@ const mobileLinks = mobileMenu.querySelectorAll('a');
 hamburger.addEventListener('click', () => {
   const open = hamburger.classList.toggle('open');
   mobileMenu.classList.toggle('open', open);
+  // prevent body scroll when menu is open
+  document.body.style.overflow = open ? 'hidden' : '';
 });
 
-/* Close drawer on link click */
+// Close drawer when any mobile link clicked
 mobileLinks.forEach(a => {
   a.addEventListener('click', () => {
     hamburger.classList.remove('open');
     mobileMenu.classList.remove('open');
-    mobileLinks.forEach(x => x.classList.remove('active'));
-    a.classList.add('active');
+    document.body.style.overflow = '';
   });
 });
 
-/* Sync mobile active link with scroll */
-window.addEventListener('scroll', () => {
-  let cur = '';
-  sections.forEach(sec => {
-    if (window.scrollY >= sec.offsetTop - 120) cur = sec.id;
-  });
-  mobileLinks.forEach(a => {
-    a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
-  });
+// Close drawer if user taps outside of it
+document.addEventListener('click', e => {
+  if (
+    mobileMenu.classList.contains('open') &&
+    !mobileMenu.contains(e.target) &&
+    !hamburger.contains(e.target)
+  ) {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }
 });
