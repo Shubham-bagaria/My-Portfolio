@@ -127,7 +127,7 @@
               Technology, Delhi</strong> and a <strong>Teaching Assistant</strong> for B.Tech students in Design and
             Analysis of Algorithms.</p>
           <p>My work sits at the intersection of <strong>full-stack development</strong> and <strong>AI/NLP</strong> —
-            most recently building VoiceShop, a fully voice-controlled e-commerce platform designed for <strong>visually
+            including VoiceShop, a fully voice-controlled e-commerce platform designed for <strong>visually
               impaired and specially-abled users</strong>, achieving 91.4% intent recognition accuracy.</p>
           <p>I've interned at <strong>Celebal Technologies</strong> (Power BI) and <strong>Kistechno Software</strong>
             (Full Stack), and I'm actively pursuing research on voice-driven accessible interfaces for online retail.
@@ -236,44 +236,53 @@
         <div class="skill-card reveal d1">
           <div class="skill-cat">Frontend</div>
           <div class="skill-tags">
-            <span class="tag">HTML5</span><span class="tag">CSS3</span>
+            <span class="tag">HTML5</span><span class="tag">CSS</span>
             <span class="tag">JavaScript</span><span class="tag">React.js</span>
           </div>
         </div>
         <div class="skill-card reveal d2">
           <div class="skill-cat">Backend</div>
           <div class="skill-tags">
-            <span class="tag">Node.js</span><span class="tag">Express.js</span>
-            <span class="tag">PHP</span><span class="tag">REST APIs</span>
+            <span class="tag">PHP</span><span class="tag">Node.js</span>
+            <span class="tag">FastAPI</span>
           </div>
         </div>
         <div class="skill-card reveal d3">
           <div class="skill-cat">Databases</div>
           <div class="skill-tags">
             <span class="tag">MongoDB</span><span class="tag">MySQL</span>
+            <span class="tag">PostgreSQL</span>
           </div>
         </div>
         <div class="skill-card reveal d4">
           <div class="skill-cat">Programming</div>
           <div class="skill-tags">
             <span class="tag">Python</span><span class="tag">C++</span>
-            <span class="tag">C</span><span class="tag">JavaScript</span>
+            <span class="tag">C</span>
           </div>
         </div>
         <div class="skill-card reveal d5">
-          <div class="skill-cat">Core CS</div>
+          <div class="skill-cat">Machine Learning</div>
           <div class="skill-tags">
-            <span class="tag">DSA</span><span class="tag">OOPs</span>
-            <span class="tag">DBMS</span><span class="tag">Computer Networks</span>
-            <span class="tag">Memory Mgmt</span>
+            <span class="tag">Scikit-learn</span><span class="tag">Pandas</span>
+            <span class="tag">NumPy</span>
           </div>
         </div>
         <div class="skill-card reveal d6">
+          <div class="skill-cat">Core CS</div>
+          <div class="skill-tags">
+            <span class="tag">Operating Systems</span>
+            <span class="tag">DSA</span><span class="tag">OOPs</span>
+            <span class="tag">DBMS</span><span class="tag">Computer Networks</span>
+            <span class="tag">Pointers</span><span class="tag">Memory Management</span>
+          </div>
+        </div>
+        <div class="skill-card skill-card-wide reveal d6">
           <div class="skill-cat">Tools &amp; Platforms</div>
           <div class="skill-tags">
-            <span class="tag">Git / GitHub</span><span class="tag">Linux</span>
+            <span class="tag">Git</span><span class="tag">GitHub</span>
+            <span class="tag">Version Control</span><span class="tag">Linux</span>
             <span class="tag">Power BI</span><span class="tag">VS Code</span>
-            <span class="tag">Azure</span>
           </div>
         </div>
       </div>
@@ -289,15 +298,33 @@
 
         <div class="proj-card reveal d1">
           <div class="proj-top">
+            <div class="proj-icon">🛡️</div>
+            <span class="proj-badge badge-ai">AI / Databases</span>
+          </div>
+          <div class="proj-name">PlanGuard — Self-Learning Query Plan Regression &amp; Recovery Engine</div>
+          <p class="proj-desc">
+            AI-powered <strong>PostgreSQL</strong> optimization system that detects query plan regressions by comparing
+            live execution against per-query historical baselines. Combines Median Absolute Deviation (MAD) and
+            Isolation Forest for anomaly detection on query plan-tree features. Uses <strong>HypoPG</strong> and pairwise
+            learning-to-rank to evaluate recovery strategies, with an interactive FastAPI + React dashboard.
+          </p>
+          <div class="proj-tech">
+            <span class="tag">PostgreSQL</span><span class="tag">FastAPI</span>
+            <span class="tag">React</span><span class="tag">HypoPG</span><span class="tag">Isolation Forest</span>
+          </div>
+        </div>
+
+        <div class="proj-card reveal d2">
+          <div class="proj-top">
             <div class="proj-icon">🎙️</div>
-            <span class="proj-badge badge-live">✓ Completed</span>
+            <span class="proj-badge badge-ai">AI / NLP</span>
           </div>
           <div class="proj-name">VoiceShop — Voice-Controlled E-Commerce</div>
           <p class="proj-desc">
             Fully hands-free e-commerce platform using the <strong>Web Speech API</strong> for real-time speech
             recognition and synthesis. Hybrid NLP engine combining rule-based pattern matching with LLM inference
             (Claude Sonnet API) for intent detection and entity extraction. Knowledge-based recommendation system with
-            real-time attribute-similarity scoring.
+            real-time attribute-similarity scoring from session behavior and product suggestions with spoken explanations.
           </p>
           <div class="proj-tech">
             <span class="tag">Web Speech API</span><span class="tag">Claude API</span>
@@ -306,7 +333,7 @@
           <span class="proj-stat">91.4% intent accuracy · 87.6% task completion</span>
         </div>
 
-        <div class="proj-card reveal d2">
+        <div class="proj-card reveal d3">
           <div class="proj-top">
             <div class="proj-icon">☕</div>
             <span class="proj-badge badge-mern">MERN Stack</span>
@@ -323,28 +350,10 @@
           </div>
         </div>
 
-        <div class="proj-card reveal d3">
-          <div class="proj-top">
-            <div class="proj-icon">🏨</div>
-            <span class="proj-badge badge-php">PHP / MySQL</span>
-          </div>
-          <div class="proj-name">Hotel Management System</div>
-          <p class="proj-desc">
-            Hotel management portal built with PHP, MySQL, JavaScript, and CSS. Streamlined database queries reducing
-            data retrieval time by ~15%. Structured MySQL records support complete daily operational workflows including
-            room management and guest tracking.
-          </p>
-          <div class="proj-tech">
-            <span class="tag">PHP</span><span class="tag">MySQL</span>
-            <span class="tag">JavaScript</span><span class="tag">CSS</span>
-          </div>
-          <span class="proj-stat">~15% faster data retrieval</span>
-        </div>
-
         <div class="proj-card reveal d4">
           <div class="proj-top">
             <div class="proj-icon">♿</div>
-            <span class="proj-badge badge-research">Research Paper</span>
+            <span class="proj-badge badge-research">Ongoing</span>
           </div>
           <div class="proj-name">VoiceShop — Research Paper</div>
           <p class="proj-desc">

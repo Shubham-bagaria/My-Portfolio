@@ -526,7 +526,7 @@ nav.scrolled { box-shadow: 0 4px 40px rgba(0, 0, 0, .5); }
 /* ==============================
    SKILLS
 ============================== */
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.2rem; }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 1.2rem; }
 .skill-card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -537,6 +537,7 @@ nav.scrolled { box-shadow: 0 4px 40px rgba(0, 0, 0, .5); }
   transition: border-color .25s, transform .25s;
 }
 .skill-card:hover { border-color: var(--border-h); transform: translateY(-4px); }
+.skill-card-wide { grid-column: 1 / -1; }
 .skill-card::before {
   content: '';
   position: absolute;
@@ -610,8 +611,7 @@ nav.scrolled { box-shadow: 0 4px 40px rgba(0, 0, 0, .5); }
   border-radius: 4px;
 }
 .badge-live { color: var(--g); background: rgba(0, 212, 170, .08); border: 1px solid rgba(0, 212, 170, .2); }
-.badge-mern { color: var(--p2); background: rgba(167, 139, 250, .08); border: 1px solid rgba(167, 139, 250, .2); }
-.badge-php { color: var(--muted); background: rgba(255, 255, 255, .04); border: 1px solid var(--border); }
+.badge-mern, .badge-ai { color: var(--p2); background: rgba(167, 139, 250, .08); border: 1px solid rgba(167, 139, 250, .2); }
 .badge-research { color: var(--y); background: rgba(251, 191, 36, .08); border: 1px solid rgba(251, 191, 36, .2); }
 .proj-name { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 800; line-height: 1.2; }
 .proj-desc { color: var(--muted); font-size: .85rem; line-height: 1.7; flex: 1; }
